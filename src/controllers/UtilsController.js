@@ -1,4 +1,4 @@
-const { imcCalulation, imcClassifier } = require('../utils/imcCal');
+const { imcCalulation, imcClassifier } = require('../utils/imcCalc');
 module.exports = {
   getImc(req, res) {
     const { imc } = req.query;
