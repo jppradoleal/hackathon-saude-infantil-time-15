@@ -12,7 +12,7 @@
 
 <a href= "https://github.com/febing20"> @Fernanda </a>
 <a href="https://github.com/jppradoleal">@João</a>
-@Sol
+<a href="https://github.com/Paulacamposro">@Sol</a>
 @Mikael
 @adalberto
 
