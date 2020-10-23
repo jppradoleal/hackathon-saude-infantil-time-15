@@ -303,7 +303,7 @@
       "maxHeight": 92.9
     }
   ],
-"bmiGirlsUnderTwo":[ {"minBmi":[], "medBmi":[],"maxBmi":[]}],
+"bmiGirlsUnderTwo":[ {"minBmi":[ ], "medBmi":[ ],"maxBmi":[ ]}],
 
   "boysUnderTwoWeight":[
     {
@@ -609,7 +609,7 @@
       "maxHeight": 93.9
     }
   ],
-  "bmiBoysUnderTwo": [ {"minBmi":[], "medBmi":[],"maxBmi":[]}],
+  "bmiBoysUnderTwo": [ {"minBmi":[ ], "medBmi":[ ],"maxBmi":[ ]}],
 
   "girlsAgeWeightHeightFromThreeToEighteen":[
     {
