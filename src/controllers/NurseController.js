@@ -29,7 +29,7 @@ module.exports = {
 
     const nurse = await Nurse.create(data);
 
-    return res.status(202).json({ message: "Created Nurse Successfully", nurse });
+    return res.status(201).json({ message: "Created Nurse Successfully", nurse });
   },
   async update(req, res) {
     const { id } = req.params;
