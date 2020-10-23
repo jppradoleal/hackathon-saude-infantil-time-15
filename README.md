@@ -20,3 +20,11 @@
 
 <a href = "https://miro.com/app/board/o9J_khtMfM0=/">Miro Files</a>
 
+# Resources
+
+<a href= "https://c3js.org/gettingstarted.html"> Gráfico </a>
+<a href="https://global.rethinkobesity.com/patients.html#section-weight-management-goals"> Exemplo de questionário </a>
+<a href="https://www.scielo.br/scielo.php?script=sci_arttext&pid=S0034-71672010000100012"> Fatores de Risco para a Criança Pesquisa sobre Obesidade</a>
+
+
+
