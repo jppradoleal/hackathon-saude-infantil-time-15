@@ -10,8 +10,8 @@
   <img src="readmeFiles/pics/adalbertopp.jpg" width="100" />
 </p>
 
-<a href= "https://github.com/coloque seu github aqui"> @Fernanda </a>
-@João
+<a href= "https://github.com/febing20"> @Fernanda </a>
+<a href="https://github.com/jppradoleal">@João</a>
 @Sol
 @Mikael
 @adalberto
