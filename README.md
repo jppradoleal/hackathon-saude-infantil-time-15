@@ -5,16 +5,17 @@ Projeto Time 15
 <p float="left">
   <img src="pics/fernandapp.jpg" width="100" />
   <img src="pics/joaopp.jpg" width="100" /> 
+  <img src="pics/solpp.jpg" width="100" />
   <img src="pics/mikael.png" width="100" />
   <img src="pics/adalberto.jpg" width="100" />
 </p>
 
 
-@Sol
 @Fernanda
-@JP
+@João
+@Sol
 @Mikael
-@adalbertobrant
+@adalberto
 
 
 
