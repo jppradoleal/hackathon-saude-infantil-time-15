@@ -10,7 +10,7 @@
   <img src="readmeFiles/pics/adalbertopp.jpg" width="100" />
 </p>
 
-<br><a href= "https://c3js.org/gettingstarted.html"> Gráfico </a></br>@Fernanda
+<a href= "https://github.com/coloque seu github aqui"> @Fernanda </a>
 @João
 @Sol
 @Mikael
