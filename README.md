@@ -1,15 +1,14 @@
-Projeto Time 15 
+# Desafio Obesidade Infantil - Time 15 
 
--- Integrantes:
+## Integrantes:
 
 <p float="left">
-  <img src="pics/fernandapp.jpg" width="100" />
-  <img src="pics/joaopp.jpg" width="100" /> 
-  <img src="pics/solpp.jpg" width="100" />
-  <img src="pics/mikael.png" width="100" />
-  <img src="pics/adalbertopp.jpg" width="100" />
+  <img src="readmeFiles/pics/fernandapp.jpg" width="100" />
+  <img src="readmeFiles/pics/joaopp.jpg" width="100" /> 
+  <img src="readmeFiles/pics/solpp.jpg" width="100" />
+  <img src="readmeFiles/pics/mikael.png" width="100" />
+  <img src="readmeFiles/pics/adalbertopp.jpg" width="100" />
 </p>
-
 
 @Fernanda
 @João
@@ -17,11 +16,7 @@ Projeto Time 15
 @Mikael
 @adalberto
 
-
-
-
-
-# Miro files
+# Ideas
 
 <a href = "https://miro.com/app/board/o9J_khtMfM0=/">Miro Files</a>
 

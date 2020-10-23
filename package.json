@@ -1,0 +1,24 @@
+{
+  "name": "hackathon-desiderata",
+  "version": "1.0.0",
+  "description": "Backend feito para o Hackathon Saúde Infantil realizado pela Desiderata e a Shawee.",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jppradoleal/hackathon-saude-infantil-time-15.git"
+  },
+  "author": "Time 15",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.6"
+  }
+}
