@@ -29,7 +29,7 @@ router.get('/child/data', authHandler.authenticate, ChildDataController.index);
 router.get('/child/data/:id', authHandler.authenticate, ChildDataController.show);
 
 // Child Registries Show, Update and Delete Routes
-router.get('/child/:id', authHandler.authenticate, ChildController.show);
+router.get('/child/detail', authHandler.authenticate, ChildController.show);
 router.put('/child/update/:id', authHandler.authenticate, ChildController.update);
 router.delete('/child/delete/:id', authHandler.authenticate, ChildController.delete);
 

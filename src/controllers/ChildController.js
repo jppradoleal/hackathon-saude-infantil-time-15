@@ -5,14 +5,16 @@ const yup = require('yup');
 
 module.exports = {
   async show(req, res) {
-    const { id } = req.params;
-    const { id: parent_id } = req.user;
+    const { rg, csus } = req.query;
 
-    const child = await Child.findById(id);
+    let child;
+    if(rg) {
+      child = await Child.findOne({rg});
+    } else if(csus) {
+      child = await Child.findOne({num_cartao_sus: csus});
+    }
     if(child) {
-      if(child.parente == parent_id) {
-        return res.json({ message: 'Child registry found', child })
-      }
+      return res.json({ message: 'Child registry found', child })
     }
     return res.json({ message: 'No child registry found' })
   },
@@ -52,12 +54,19 @@ module.exports = {
       cidade: yup.string().required(),
       uf: yup.string().required().max(2),
       sexo_biologico: yup.string().required(),
-      raca: yup.string().required(),
+      raca: yup.string().required().oneOf([
+        'BRANCA',
+        'PRETA',
+        'PARDA',
+        'AMARELA',
+        'INDÍGENA'
+      ]),
       endereco_un_basica_frequentada: yup.string().required(),
       atividades_fisicas: yup.boolean(),
       comida_industrializada: yup.boolean(),
       frequenta_medico: yup.boolean(),
       num_cartao_sus: yup.string().required(),
+      rg: yup.string().required(),
       data_de_nascimento: yup.date().required()
     })
 

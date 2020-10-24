@@ -52,6 +52,7 @@ const childSchema = new mongoose.Schema({
 
   endereco_un_basica_frequentada: String,
   num_cartao_sus: String,
+  rg: String,
 
   data_de_nascimento: Date,
 }, {

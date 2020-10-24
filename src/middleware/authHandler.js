@@ -21,13 +21,13 @@ module.exports = {
     }
   },
   async login(req, res) {
-    const { email, senha } = req.body;
+    const { cpf, senha } = req.body;
 
-    const user = await User.findOne({email});
+    const user = await User.findOne({cpf});
 
     if(user) {
       await bcrypt.compare(senha, user.senha);
-      const token = await jwt.sign({ email, id: user.id }, process.env.SECRET);
+      const token = await jwt.sign({ cpf, id: user.id }, process.env.SECRET);
       return res.json({ message: 'User authenticated', token});
     }
 

@@ -5,7 +5,7 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  email: {
+  cpf: {
     type: String,
     required: true
   },
@@ -15,9 +15,14 @@ const userSchema = mongoose.Schema({
   },
   tipo: {
     type: String,
-    enum: ['PARENT', 'ADMIN', 'NURSE'],
+    enum: ['PARENT', 'ADMIN'],
     default: 'PARENT'
-  }
+  },
+  data_de_nascimento: Date,
+  estado: String,
+  municipio: String,
+  endereco: String,
+  telefone: String 
 })
 
 module.exports = mongoose.model('User', userSchema);
