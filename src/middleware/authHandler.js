@@ -17,7 +17,7 @@ module.exports = {
       next();
     } catch (err) {
       console.log(err);
-      return res.status(400).json({message: 'Not authorized'});
+      return res.status(401).json({message: 'Not authorized'});
     }
   },
   async login(req, res) {
