@@ -45,10 +45,12 @@ const childSchema = new mongoose.Schema({
     ],
     required: true
   },
+
+  atividades_fisicas: Boolean,
+  comida_industrializada: Boolean,
+  frequenta_medico: Boolean,
+
   endereco_un_basica_frequentada: String,
-  num_prontuario: String,
-  num_declaracao_nascido_vivo: String,
-  num_registro_civil_nascimento: String,
   num_cartao_sus: String,
 
   data_de_nascimento: Date,

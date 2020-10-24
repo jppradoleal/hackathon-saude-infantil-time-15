@@ -54,9 +54,9 @@ module.exports = {
       sexo_biologico: yup.string().required(),
       raca: yup.string().required(),
       endereco_un_basica_frequentada: yup.string().required(),
-      num_prontuario: yup.string(),
-      num_declaracao_nascido_vivo: yup.string(),
-      num_registro_civil_nascimento: yup.string(),
+      atividades_fisicas: yup.boolean(),
+      comida_industrializada: yup.boolean(),
+      frequenta_medico: yup.boolean(),
       num_cartao_sus: yup.string().required(),
       data_de_nascimento: yup.date().required()
     })
@@ -96,9 +96,6 @@ module.exports = {
       sexo_biologico: yup.string(),
       raca: yup.string(),
       endereco_un_basica_frequentada: yup.string(),
-      num_prontuario: yup.string(),
-      num_declaracao_nascido_vivo: yup.string(),
-      num_registro_civil_nascimento: yup.string(),
       num_cartao_sus: yup.string(),
       data_de_nascimento: yup.date(),
       peso: yup.number().required(),
@@ -116,7 +113,7 @@ module.exports = {
 
     const imc = peso / altura * altura;
 
-    const childData = await ChildData.create({ id_crianca: child._id, peso, altura, imc });
+    await ChildData.create({ id_crianca: child._id, peso, altura, imc });
 
     return res.json({ message: 'Child registry updated successfully' });
   },

@@ -30,7 +30,7 @@ module.exports = {
       senha: yup.string().required(),
     });
 
-    await schema.validate({ nome, email, senha });
+    await schema.validate({ nome, email, senha }, { abortEarly: false });
 
     senha = await bcrypt.hash(senha, Number(process.env.ROUNDS_BCRYPT));
 

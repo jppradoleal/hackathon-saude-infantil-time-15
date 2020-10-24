@@ -1,9 +1,12 @@
 const router = require('express').Router();
+const upload = require('multer')(require('./config/upload'));
+
 const UtilsController = require('./controllers/UtilsController');
 const ChildController = require('./controllers/ChildController');
 const authHandler = require('./middleware/authHandler');
 const UserController = require('./controllers/UserController');
 const ChildDataController = require('./controllers/ChildDataController');
+const PostController = require('./controllers/PostController');
 
 router.get('/', (req, res) => {
   return res.json({message: 'Hello World!'});
@@ -16,6 +19,10 @@ router.get('/child', authHandler.authenticate, ChildController.index);
 // Login and Create User Routes;
 router.post('/user/login', authHandler.login);
 router.post('/user/create', UserController.create);
+
+// Create Post Route
+router.post('/posts/create', authHandler.authenticate, upload.single('image'), PostController.create);
+router.get('/posts', PostController.index);
 
 // Child Data Index and Show
 router.get('/child/data', authHandler.authenticate, ChildDataController.index);
