@@ -12,10 +12,10 @@
 
 # Recursos
 
-* [Gráfico]("https://c3js.org/gettingstarted.html")
-* [Exemplo de questionário]("https://global.rethinkobesity.com/patients.html#section-weight-management-goals")
-* [Fatores de Risco para a Criança Pesquisa sobre Obesidade]("https://www.scielo.br/scielo.php?script=sci_arttext&pid=S0034-71672010000100012")
-* [Ambiente Obesogênico]("https://www.scielo.br/scielo.php?script=sci_arttext&pid=S0021-75572016000400030&lng=pt&tlng=pt")
+* [Gráfico](https://c3js.org/gettingstarted.html)
+* [Exemplo de questionário](https://global.rethinkobesity.com/patients.html#section-weight-management-goals)
+* [Fatores de Risco para a Criança Pesquisa sobre Obesidade](https://www.scielo.br/scielo.php?script=sci_arttext&pid=S0034-71672010000100012)
+* [Ambiente Obesogênico](https://www.scielo.br/scielo.php?script=sci_arttext&pid=S0021-75572016000400030&lng=pt&tlng=pt)
 
 
 
