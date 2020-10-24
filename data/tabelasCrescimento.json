@@ -1,610 +1,456 @@
 {
-   "girlsUnderTwoWeight":[
+   "girlsUnderTwoYears":[
     {
       "age": 0,
+      "minHeight": 45.4,
+      "medHeight": 49.1,
+      "maxHeight": 52.9,
       "minWeight": 2.4,
       "medWeight": 3.2,
       "maxWeight": 4.2
     },
     {
       "age": 1,
+      "minHeight": 49.8,
+      "medHeight": 53.7,
+      "maxHeight": 57.6,
       "minWeight": 3.2,
       "medWeight": 4.2,
       "maxWeight": 5.5
     },
     {
       "age": 2,
+      "minHeight": 53,
+      "medHeight": 57.1,
+      "maxHeight": 61.1,
       "minWeight": 3.9,
       "medWeight": 5.1,
       "maxWeight": 6.6
     },
     {
       "age": 3,
+      "minHeight": 55.6,
+      "medHeight": 59.8,
+      "maxHeight": 64,
       "minWeight": 4.5,
       "medWeight": 5.8,
       "maxWeight": 7.5
     },
     {
       "age": 4,
+      "minHeight": 57.8,
+      "medHeight": 62.1,
+      "maxHeight": 66.4,
       "minWeight": 5,
       "medWeight": 6.4,
       "maxWeight": 8.2
     },
     {
       "age": 5,
+      "minHeight": 59.6,
+      "medHeight": 64,
+      "maxHeight": 68.5,
       "minWeight": 5.4,
       "medWeight": 6.9,
       "maxWeight": 8.8
     },
     {
       "age": 6,
+      "minHeight": 61.2,
+      "medHeight": 65.7,
+      "maxHeight": 70.3,
       "minWeight": 5.7,
       "medWeight": 7.3,
       "maxWeight": 9.3
     },
     {
       "age": 7,
+      "minHeight": 62.7,
+      "medHeight": 67.3,
+      "maxHeight": 71.9,
       "minWeight": 6,
       "medWeight": 7.6,
       "maxWeight": 9.8
     },
     {
       "age": 8,
+      "minHeight": 64,
+      "medHeight": 68.7,
+      "maxHeight": 73.5,
       "minWeight": 6.3,
       "medWeight": 7.9,
       "maxWeight": 10.2
     },
     {
       "age": 9,
+      "minHeight": 65.3,
+      "medHeight": 70.1,
+      "maxHeight": 75,
       "minWeight": 6.5,
       "medWeight": 8.2,
       "maxWeight": 10.5
     },
     {
       "age": 10,
+      "minHeight": 66.5,
+      "medHeight": 71.5,
+      "maxHeight": 76.4,
       "minWeight": 6.7,
       "medWeight": 8.5,
       "maxWeight": 10.9
     },
     {
       "age": 11,
+      "minHeight": 67.7,
+      "medHeight": 72.8,
+      "maxHeight": 77.8,
       "minWeight": 6.9,
       "medWeight": 8.7,
       "maxWeight": 11.2
     },
     {
       "age": 12,
+      "minHeight": 68.9,
+      "medHeight": 74,
+      "maxHeight": 79.2,
       "minWeight": 7,
       "medWeight": 8.9,
       "maxWeight": 11.5
     },
     {
       "age": 13,
+      "minHeight": 70,
+      "medHeight": 75.2,
+      "maxHeight": 80.5,
       "minWeight": 7.2,
       "medWeight": 9.2,
       "maxWeight": 11.8
     },
     {
       "age": 14,
+      "minHeight": 71,
+      "medHeight": 76.4,
+      "maxHeight": 81.7,
       "minWeight": 7.4,
       "medWeight": 9.4,
       "maxWeight": 12.1
     },
     {
       "age": 15,
+      "minHeight": 72,
+      "medHeight": 77.5,
+      "maxHeight": 83,
       "minWeight": 7.6,
       "medWeight": 9.6,
       "maxWeight": 12.4
     },
     {
       "age": 16,
+      "minHeight": 73,
+      "medHeight": 78.6,
+      "maxHeight": 84.2,
       "minWeight": 7.7,
       "medWeight": 9.8,
       "maxWeight": 12.6
     },
     {
       "age": 17,
+      "minHeight": 74,
+      "medHeight": 79.7,
+      "maxHeight": 85.4,
       "minWeight": 7.9,
       "medWeight": 10,
       "maxWeight": 12.9
     },
     {
       "age": 18,
+      "minHeight": 74.9,
+      "medHeight": 80.7,
+      "maxHeight": 86.5,
       "minWeight": 8.1,
       "medWeight": 10.2,
       "maxWeight": 13.2
     },
     {
       "age": 19,
+      "minHeight": 75.8,
+      "medHeight": 81.7,
+      "maxHeight": 87.6,
       "minWeight": 8.2,
       "medWeight": 10.4,
       "maxWeight": 13.5
     },
     {
       "age": 20,
+      "minHeight": 76.7,
+      "medHeight": 82.7,
+      "maxHeight": 88.7,
       "minWeight": 8.4,
       "medWeight": 10.6,
       "maxWeight": 13.7
     },
     {
       "age": 21,
+      "minHeight": 77.5,
+      "medHeight": 83.7,
+      "maxHeight": 89.8,
       "minWeight": 8.6,
       "medWeight": 10.9,
       "maxWeight": 14
     },
     {
       "age": 22,
+      "minHeight": 78.4,
+      "medHeight": 84.6,
+      "maxHeight": 90.8,
       "minWeight": 8.7,
       "medWeight": 11.1,
       "maxWeight": 14.3
     },
     {
       "age": 23,
+      "minHeight": 79.3,
+      "medHeight": 85.5,
+      "maxHeight": 91.9,
       "minWeight": 8.9,
       "medWeight": 11.3,
       "maxWeight": 14.6
     },
     {
       "age": 24,
+      "minHeight": 80,
+      "medHeight": 86.4,
+      "maxHeight": 92.9,
       "minWeight": 9,
       "medWeight": 11.5,
       "maxWeight": 14.8
     }
-  ],
-  "girlsUnderTwoHeight":[
+  ],  
+  "boysUnderTwoYears":[
     {
       "age": 0,
-      "minHeight": 45.4,
-      "medHeight": 49.1,
-      "maxHeight": 52.9
-    },
-    {
-      "age": 1,
-      "minHeight": 49.8,
-      "medHeight": 53.7,
-      "maxHeight": 57.6
-    },
-    {
-      "age": 2,
-      "minHeight": 53,
-      "medHeight": 57.1,
-      "maxHeight": 61.1
-    },
-    {
-      "age": 3,
-      "minHeight": 55.6,
-      "medHeight": 59.8,
-      "maxHeight": 64
-    },
-    {
-      "age": 4,
-      "minHeight": 57.8,
-      "medHeight": 62.1,
-      "maxHeight": 66.4
-    },
-    {
-      "age": 5,
-      "minHeight": 59.6,
-      "medHeight": 64,
-      "maxHeight": 68.5
-    },
-    {
-      "age": 6,
-      "minHeight": 61.2,
-      "medHeight": 65.7,
-      "maxHeight": 70.3
-    },
-    {
-      "age": 7,
-      "minHeight": 62.7,
-      "medHeight": 67.3,
-      "maxHeight": 71.9
-    },
-    {
-      "age": 8,
-      "minHeight": 64,
-      "medHeight": 68.7,
-      "maxHeight": 73.5
-    },
-    {
-      "age": 9,
-      "minHeight": 65.3,
-      "medHeight": 70.1,
-      "maxHeight": 75
-    },
-    {
-      "age": 10,
-      "minHeight": 66.5,
-      "medHeight": 71.5,
-      "maxHeight": 76.4
-    },
-    {
-      "age": 11,
-      "minHeight": 67.7,
-      "medHeight": 72.8,
-      "maxHeight": 77.8
-    },
-    {
-      "age": 12,
-      "minHeight": 68.9,
-      "medHeight": 74,
-      "maxHeight": 79.2
-    },
-    {
-      "age": 13,
-      "minHeight": 70,
-      "medHeight": 75.2,
-      "maxHeight": 80.5
-    },
-    {
-      "age": 14,
-      "minHeight": 71,
-      "medHeight": 76.4,
-      "maxHeight": 81.7
-    },
-    {
-      "age": 15,
-      "minHeight": 72,
-      "medHeight": 77.5,
-      "maxHeight": 83
-    },
-    {
-      "age": 16,
-      "minHeight": 73,
-      "medHeight": 78.6,
-      "maxHeight": 84.2
-    },
-    {
-      "age": 17,
-      "minHeight": 74,
-      "medHeight": 79.7,
-      "maxHeight": 85.4
-    },
-    {
-      "age": 18,
-      "minHeight": 74.9,
-      "medHeight": 80.7,
-      "maxHeight": 86.5
-    },
-    {
-      "age": 19,
-      "minHeight": 75.8,
-      "medHeight": 81.7,
-      "maxHeight": 87.6
-    },
-    {
-      "age": 20,
-      "minHeight": 76.7,
-      "medHeight": 82.7,
-      "maxHeight": 88.7
-    },
-    {
-      "age": 21,
-      "minHeight": 77.5,
-      "medHeight": 83.7,
-      "maxHeight": 89.8
-    },
-    {
-      "age": 22,
-      "minHeight": 78.4,
-      "medHeight": 84.6,
-      "maxHeight": 90.8
-    },
-    {
-      "age": 23,
-      "minHeight": 79.3,
-      "medHeight": 85.5,
-      "maxHeight": 91.9
-    },
-    {
-      "age": 24,
-      "minHeight": 80,
-      "medHeight": 86.4,
-      "maxHeight": 92.9
-    }
-  ],
-  "boysUnderTwoWeight":[
-    {
-      "age": 0,
+      "minHeight": 46.1,
+      "medHeight": 49.9,
+      "maxHeight": 53.7,
       "minWeight": 2.5,
       "medWeight": 3.3,
       "maxWeight": 4.4
     },
     {
       "age": 1,
+      "minHeight": 50.8,
+      "medHeight": 54.7,
+      "maxHeight": 58.6,
       "minWeight": 3.4,
       "medWeight": 4.5,
       "maxWeight": 5.8
     },
     {
       "age": 2,
+      "minHeight": 54.4,
+      "medHeight": 58.4,
+      "maxHeight": 62.4,
       "minWeight": 4.3,
       "medWeight": 5.6,
       "maxWeight": 7.1
     },
     {
       "age": 3,
+      "minHeight": 57.3,
+      "medHeight": 61.4,
+      "maxHeight": 65.5,
       "minWeight": 5,
       "medWeight": 6.4,
       "maxWeight": 8
     },
     {
       "age": 4,
+      "minHeight": 59.7,
+      "medHeight": 63.9,
+      "maxHeight": 68,
       "minWeight": 5.6,
       "medWeight": 7,
       "maxWeight": 8.7
     },
     {
       "age": 5,
+      "minHeight": 61.7,
+      "medHeight": 65.9,
+      "maxHeight": 70.1,
       "minWeight": 6,
       "medWeight": 7.5,
       "maxWeight": 9.3
     },
     {
       "age": 6,
+      "minHeight": 63.3,
+      "medHeight": 67.6,
+      "maxHeight": 71.9,
       "minWeight": 6.4,
       "medWeight": 7.9,
       "maxWeight": 9.8
     },
     {
       "age": 7,
+      "minHeight": 64.8,
+      "medHeight": 69.2,
+      "maxHeight": 73.5,
       "minWeight": 6.7,
       "medWeight": 8.3,
       "maxWeight": 10.3
     },
     {
       "age": 8,
+      "minHeight": 66.2,
+      "medHeight": 70.6,
+      "maxHeight": 75,
       "minWeight": 6.9,
       "medWeight": 8.6,
       "maxWeight": 10.7
     },
     {
       "age": 9,
+      "minHeight": 67.5,
+      "medHeight": 72,
+      "maxHeight": 76.5,
       "minWeight": 7.1,
       "medWeight": 8.9,
       "maxWeight": 11
     },
     {
       "age": 10,
+      "minHeight": 68.7,
+      "medHeight": 73.3,
+      "maxHeight": 77.9,
       "minWeight": 7.4,
       "medWeight": 9.2,
       "maxWeight": 11.4
     },
     {
       "age": 11,
+      "minHeight": 69.9,
+      "medHeight": 74.5,
+      "maxHeight": 79.2,
       "minWeight": 7.6,
       "medWeight": 9.4,
       "maxWeight": 11.7
     },
     {
       "age": 12,
+      "minHeight": 71,
+      "medHeight": 75.7,
+      "maxHeight": 80.5,
       "minWeight": 7.7,
       "medWeight": 9.6,
       "maxWeight": 12
     },
     {
       "age": 13,
+      "minHeight": 72.1,
+      "medHeight": 76.9,
+      "maxHeight": 81.8,
       "minWeight": 7.9,
       "medWeight": 9.9,
       "maxWeight": 12.3
     },
     {
       "age": 14,
+      "minHeight": 73.1,
+      "medHeight": 78,
+      "maxHeight": 83,
       "minWeight": 8.1,
       "medWeight": 10.1,
       "maxWeight": 12.6
     },
     {
       "age": 15,
+      "minHeight": 74.1,
+      "medHeight": 79.1,
+      "maxHeight": 84.2,
       "minWeight": 8.3,
       "medWeight": 10.3,
       "maxWeight": 12.8
     },
     {
       "age": 16,
+      "minHeight": 75,
+      "medHeight": 80.2,
+      "maxHeight": 85.4,
       "minWeight": 8.4,
       "medWeight": 10.5,
       "maxWeight": 13.1
     },
     {
       "age": 17,
+      "minHeight": 76,
+      "medHeight": 81.2,
+      "maxHeight": 86.5,
       "minWeight": 8.6,
       "medWeight": 10.7,
       "maxWeight": 13.4
     },
     {
       "age": 18,
+      "minHeight": 76.9,
+      "medHeight": 82.3,
+      "maxHeight": 87.7,
       "minWeight": 8.8,
       "medWeight": 10.9,
       "maxWeight": 13.7
     },
     {
       "age": 19,
+      "minHeight": 77.7,
+      "medHeight": 83.2,
+      "maxHeight": 88.8,
       "minWeight": 8.9,
       "medWeight": 11.1,
       "maxWeight": 13.9
     },
     {
       "age": 20,
+      "minHeight": 78.6,
+      "medHeight": 84.2,
+      "maxHeight": 89.8,
       "minWeight": 9.1,
       "medWeight": 11.3,
       "maxWeight": 14.2
     },
     {
       "age": 21,
+      "minHeight": 79.4,
+      "medHeight": 85.1,
+      "maxHeight": 90.9,
       "minWeight": 9.2,
       "medWeight": 11.5,
       "maxWeight": 14.5
     },
     {
       "age": 22,
+      "minHeight": 80.2,
+      "medHeight": 86,
+      "maxHeight": 91.9,
       "minWeight": 9.4,
       "medWeight": 11.8,
       "maxWeight": 14.7
     },
     {
       "age": 23,
+      "minHeight": 81,
+      "medHeight": 86.9,
+      "maxHeight": 92.9,
       "minWeight": 9.5,
       "medWeight": 12,
       "maxWeight": 15
     },
     {
       "age": 24,
+      "minHeight": 81.7,
+      "medHeight": 87.8,
+      "maxHeight": 93.9,
       "minWeight": 9.7,
       "medWeight": 12.2,
       "maxWeight": 15.3
-    }
-  ],
-  "boysUnderTwoHeight":[
-    {
-      "age": 0,
-      "minHeight": 46.1,
-      "medHeight": 49.9,
-      "maxHeight": 53.7
-    },
-    {
-      "age": 1,
-      "minHeight": 50.8,
-      "medHeight": 54.7,
-      "maxHeight": 58.6
-    },
-    {
-      "age": 2,
-      "minHeight": 54.4,
-      "medHeight": 58.4,
-      "maxHeight": 62.4
-    },
-    {
-      "age": 3,
-      "minHeight": 57.3,
-      "medHeight": 61.4,
-      "maxHeight": 65.5
-    },
-    {
-      "age": 4,
-      "minHeight": 59.7,
-      "medHeight": 63.9,
-      "maxHeight": 68
-    },
-    {
-      "age": 5,
-      "minHeight": 61.7,
-      "medHeight": 65.9,
-      "maxHeight": 70.1
-    },
-    {
-      "age": 6,
-      "minHeight": 63.3,
-      "medHeight": 67.6,
-      "maxHeight": 71.9
-    },
-    {
-      "age": 7,
-      "minHeight": 64.8,
-      "medHeight": 69.2,
-      "maxHeight": 73.5
-    },
-    {
-      "age": 8,
-      "minHeight": 66.2,
-      "medHeight": 70.6,
-      "maxHeight": 75
-    },
-    {
-      "age": 9,
-      "minHeight": 67.5,
-      "medHeight": 72,
-      "maxHeight": 76.5
-    },
-    {
-      "age": 10,
-      "minHeight": 68.7,
-      "medHeight": 73.3,
-      "maxHeight": 77.9
-    },
-    {
-      "age": 11,
-      "minHeight": 69.9,
-      "medHeight": 74.5,
-      "maxHeight": 79.2
-    },
-    {
-      "age": 12,
-      "minHeight": 71,
-      "medHeight": 75.7,
-      "maxHeight": 80.5
-    },
-    {
-      "age": 13,
-      "minHeight": 72.1,
-      "medHeight": 76.9,
-      "maxHeight": 81.8
-    },
-    {
-      "age": 14,
-      "minHeight": 73.1,
-      "medHeight": 78,
-      "maxHeight": 83
-    },
-    {
-      "age": 15,
-      "minHeight": 74.1,
-      "medHeight": 79.1,
-      "maxHeight": 84.2
-    },
-    {
-      "age": 16,
-      "minHeight": 75,
-      "medHeight": 80.2,
-      "maxHeight": 85.4
-    },
-    {
-      "age": 17,
-      "minHeight": 76,
-      "medHeight": 81.2,
-      "maxHeight": 86.5
-    },
-    {
-      "age": 18,
-      "minHeight": 76.9,
-      "medHeight": 82.3,
-      "maxHeight": 87.7
-    },
-    {
-      "age": 19,
-      "minHeight": 77.7,
-      "medHeight": 83.2,
-      "maxHeight": 88.8
-    },
-    {
-      "age": 20,
-      "minHeight": 78.6,
-      "medHeight": 84.2,
-      "maxHeight": 89.8
-    },
-    {
-      "age": 21,
-      "minHeight": 79.4,
-      "medHeight": 85.1,
-      "maxHeight": 90.9
-    },
-    {
-      "age": 22,
-      "minHeight": 80.2,
-      "medHeight": 86,
-      "maxHeight": 91.9
-    },
-    {
-      "age": 23,
-      "minHeight": 81,
-      "medHeight": 86.9,
-      "maxHeight": 92.9
-    },
-    {
-      "age": 24,
-      "minHeight": 81.7,
-      "medHeight": 87.8,
-      "maxHeight": 93.9
     }
   ],
   "girlsAgeWeightHeightFromThreeToEighteen":[
