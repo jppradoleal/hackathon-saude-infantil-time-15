@@ -6,20 +6,28 @@ const yup = require('yup');
 module.exports = {
   async show(req, res) {
     const { id } = req.params;
-    
-    const child = await Child.findById(id);
+    const { id: parent_id } = req.user;
 
-    return res.json({ message: 'Child registry found', child })
+    const child = await Child.findById(id);
+    if(child) {
+      if(child.parente == parent_id) {
+        return res.json({ message: 'Child registry found', child })
+      }
+    }
+    return res.json({ message: 'No child registry found' })
   },
 
   async index(req, res) {
+    const {id: parent_id} = req.user; 
     const childs = await Child.find();
     
+    const data = childs.filter(child => child.parente == parent_id);
+
     return res.json({ message: 
-      childs.length ? 
+      data.length ? 
         'Multiple children registries found' : 
         'No children registries found', 
-      childs});
+      data});
   },
 
   async store(req, res) {
@@ -75,39 +83,42 @@ module.exports = {
     const data = req.body;
 
     const schema = yup.object().shape({
-      nome_da_crianca: yup.string().required(),
-      parente: yup.string().required(),
-      municipio_nascimento: yup.string().required(),
-      endereco: yup.string().required(),
+      nome_da_crianca: yup.string(),
+      parente: yup.string(),
+      municipio_nascimento: yup.string(),
+      endereco: yup.string(),
       ponto_referencia: yup.string(),
       telefone: yup.string(),
-      bairro: yup.string().required(),
-      cep: yup.string().required(),
-      cidade: yup.string().required(),
-      uf: yup.string().required().max(2),
-      sexo_biologico: yup.string().required(),
-      raca: yup.string().required(),
-      endereco_un_basica_frequentada: yup.string().required(),
+      bairro: yup.string(),
+      cep: yup.string(),
+      cidade: yup.string(),
+      uf: yup.string().max(2),
+      sexo_biologico: yup.string(),
+      raca: yup.string(),
+      endereco_un_basica_frequentada: yup.string(),
       num_prontuario: yup.string(),
       num_declaracao_nascido_vivo: yup.string(),
       num_registro_civil_nascimento: yup.string(),
-      num_cartao_sus: yup.string().required(),
-      data_de_nascimento: yup.date().required()
+      num_cartao_sus: yup.string(),
+      data_de_nascimento: yup.date(),
+      peso: yup.number().required(),
+      altura: yup.number().required(),
     });
 
     await schema.validate(data, { abortEarly: false });
 
-    const child = await Child.findOne(id);
+    const child = await Child.findById(id);
 
     if(child.parente === req.user.id) 
-      await Child.updateOne(child, data);
+      await Child.updateOne(child, data, { new: true });
     
-    const childData = await ChildData.create({ id_crianca: child._id, peso, altura });
+    const {peso, altura} = data;
 
-    return res.json({ message: 'Child registry updated successfully', child: {
-      ...child,
-      child_data: {...childData}
-    } });
+    const imc = peso / altura * altura;
+
+    const childData = await ChildData.create({ id_crianca: child._id, peso, altura, imc });
+
+    return res.json({ message: 'Child registry updated successfully' });
   },
   async delete(req, res) {
     const { id } = req.params;

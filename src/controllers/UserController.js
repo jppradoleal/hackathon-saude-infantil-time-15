@@ -1,4 +1,4 @@
-const Parent = require('../models/User');
+const User = require('../models/User');
 const bcrypt = require('bcrypt');
 const yup = require('yup');
 
@@ -6,9 +6,9 @@ module.exports = {
   async show(req, res) {
     const { id } = req.params;
 
-    const parent = await Parent.findById(id);
+    const user = await User.findById(id);
 
-    return res.json({ message: 'Found user.', parent });
+    return res.json({ message: 'Found user.', user });
   },
   
   async create(req, res) {
@@ -17,6 +17,12 @@ module.exports = {
       email,
       senha
     } = req.body;
+
+    const userExists = await User.findOne({email});
+
+    if(userExists) {
+      return res.status(400).json({error: 'Email already signed up'});
+    }
 
     const schema = yup.object().shape({
       nome: yup.string().required(),
@@ -28,7 +34,7 @@ module.exports = {
 
     senha = await bcrypt.hash(senha, Number(process.env.ROUNDS_BCRYPT));
 
-    await Parent.create({nome, email, senha});
+    await User.create({nome, email, senha});
 
     return res.status(202).json({ message: "User account created" });
   },
@@ -36,7 +42,7 @@ module.exports = {
   async delete(req, res) {
     const { id } = req.params;
 
-    await Parent.findByIdAndDelete(id);
+    await User.findByIdAndDelete(id);
 
     return res.json({ message: "User account deleted" });
   },

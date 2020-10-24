@@ -3,21 +3,28 @@ const UtilsController = require('./controllers/UtilsController');
 const ChildController = require('./controllers/ChildController');
 const authHandler = require('./middleware/authHandler');
 const UserController = require('./controllers/UserController');
+const ChildDataController = require('./controllers/ChildDataController');
 
 router.get('/', (req, res) => {
   return res.json({message: 'Hello World!'});
 });
 
-// Child Registries Routes
+// Child Registries Create and Index Routes
 router.post('/child', authHandler.authenticate, ChildController.store);
-router.get('/child', ChildController.index);
-router.get('/child/:id', ChildController.show);
-router.put('/child/update/:id', authHandler.authenticate, ChildController.update);
-router.delete('/child/delete/:id', authHandler.authenticate, ChildController.delete);
+router.get('/child', authHandler.authenticate, ChildController.index);
 
 // Login and Create User Routes;
 router.post('/user/login', authHandler.login);
 router.post('/user/create', UserController.create);
+
+// Child Data Index and Show
+router.get('/child/data', authHandler.authenticate, ChildDataController.index);
+router.get('/child/data/:id', authHandler.authenticate, ChildDataController.show);
+
+// Child Registries Show, Update and Delete Routes
+router.get('/child/:id', authHandler.authenticate, ChildController.show);
+router.put('/child/update/:id', authHandler.authenticate, ChildController.update);
+router.delete('/child/delete/:id', authHandler.authenticate, ChildController.delete);
 
 // IMC
 router.get('/utils/imc', UtilsController.getImc);

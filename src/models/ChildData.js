@@ -13,6 +13,10 @@ const childSchema = new mongoose.Schema({
     type: Number,
     default: 0
   },
+  imc: {
+    type: Number,
+    default: 0
+  }
 }, {
   timestamps: true
 });
