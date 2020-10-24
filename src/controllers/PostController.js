@@ -12,6 +12,7 @@ module.exports = {
       titulo: yup.string().required().max(150),
       link: yup.string().required().url(),
       descricao: yup.string().required().max(255),
+      tag: yup.string().required().max(15) 
     });
 
     await schema.validate(data, { abortEarly: false });
@@ -30,7 +31,8 @@ module.exports = {
   },
 
   async index(req, res) {
-    const posts = await Post.find();
+    const { page=0 } = req.query;
+    const posts = await Post.find().skip(page*10).limit(10);
     return res.json(posts);
   }
 }

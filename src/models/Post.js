@@ -15,6 +15,11 @@ const postSchema = mongoose.Schema({
     required: true,
     maxlength: 255
   },
+  tag: { 
+    type: String, 
+    maxlength: 15, 
+    required: true 
+  },
   caminho_da_imagem: {
     type: String,
     required: true
