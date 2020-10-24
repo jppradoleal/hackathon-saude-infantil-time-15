@@ -9,15 +9,32 @@ const childSchema = new mongoose.Schema({
     type: String, 
     required: true
   },
-  peso: {
-    type: Number,
+  nome_do_pai: {
+    type: String
   },
-  peso_ao_nascer: Number,
-  altura: Number,
+  municipio_nascimento: {
+    type: String,
+    required: true
+  },
+  endereco: {
+    type: String,
+    required: true
+  },
+  ponto_referencia: {
+    type: String
+  },
+  telefone: String,
+  bairro: String,
+  cep: String,
+  cidade: String,
+  uf: {
+    type: String,
+    maxlength: 2,
+  },
   sexo_biologico: {
     type: String,
     enum: ['M', 'F'],
-    req
+    required: true
   },
   raca: {
     type: String,
@@ -30,84 +47,15 @@ const childSchema = new mongoose.Schema({
     ],
     required: true
   },
-  uf: {
-    type: String,
-    maxlength: 2,
-    required: true
-  },
-  municipio: String,
-  local_de_atendimento: {
-    type: String,
-    enum: [
-      'UBS',
-      'Unidade Movel',
-      'Rua',
-      'Domicilio',
-      'Escola/Creche',
-      'Posto',
-      'Instituição',
-      'Unidade Socioeducativa',
-      'Outros'
-    ],
-    required: true,
-    default: 'Outros'
-  },
-  frequenta_curso: Boolean,
-  doencas: {
-    type: [String],
-    enum: [
-      'Anemia falciforme',
-      'Diabetes melitus',
-      'Doencas cardiovasculares',
-      'Hipertensão Arterial Sistêmica',
-      'Osteoporose',
-      'Outras',
-      'Nenhuma'
-    ],
-    required: true,
-    default: 'Nenhuma'
-  },
-  deficiencias: {
-    type: [String],
-    enum: [
-      'Anemia ferropriva',
-      'Distúrbio por Deficiência de Iodo',
-      'Diarréia',
-      'Infecções intestinais virais',
-      'Infecção Respiratória Aguda',
-      'Hipovitaminose A',
-      'Outras',
-      'Nenhuma' 
-    ],
-    required: true,
-    default: 'Nenhuma'
-  },
-  hipertenso: {
-    type: Boolean,
-    required: true,
-    default: false
-  },
-  diabetico: {
-    type: Boolean,
-    required: true,
-    default: false
-  },
-  tipo_acompanhamento: {
-    type: String,
-    enum: [
-      'Atenção Básica',
-      'Chamada Nutricional',
-      'Saúde na Escola'
-    ]
-  },
-
-  id_funcionario: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Nurse',
-    required: true
-  },
+  endereco_un_basica_frequentada: String,
+  num_prontuario: String,
+  num_declaracao_nascido_vivo: String,
+  num_registro_civil_nascimento: String,
+  num_cartao_sus: String,
 
   data_de_nascimento: Date,
+}, {
+  timestamps: true
 });
 
 module.exports = mongoose.model('Child', childSchema);

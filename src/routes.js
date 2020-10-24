@@ -1,16 +1,16 @@
 const router = require('express').Router();
-const NurseController = require('./controllers/NurseController');
 const UtilsController = require('./controllers/UtilsController');
+const ChildController = require('./controllers/ChildController');
 
 router.get('/', (req, res) => {
   return res.json({message: 'Hello World!'});
 });
 
-router.post('/nurse', NurseController.store);
-router.get('/nurse', NurseController.index);
-router.get('/nurse/:id', NurseController.show);
-router.put('/nurse/update/:id', NurseController.update);
-router.delete('/nurse/delete/:id', NurseController.delete);
+router.post('/child', ChildController.store);
+router.get('/child', ChildController.index);
+router.get('/child/:id', ChildController.show);
+router.put('/child/update/:id', ChildController.update);
+router.delete('/child/delete/:id', ChildController.delete);
 
 // IMC
 router.get('/utils/imc', UtilsController.getImc);
