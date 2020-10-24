@@ -180,10 +180,14 @@ module.exports = {
     await schema.validate(data, { abortEarly: false });
 
     const child = await Child.findByIdAndUpdate(id, data, { new: true });
+    const childData = await ChildData.findOneAndUpdate(
+      { id_crianca: child._id }, 
+      { peso, altura }
+    );
 
     return res.json({ message: "Child registry updated successfully", child: {
       ...child,
-      ...childData
+      child_data: {...childData}
     } });
   },
   async delete(req, res) {

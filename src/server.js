@@ -3,7 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const errorHandler = require('./errors/handler');
+const errorHandler = require('./middleware/errorHandler');
 
 require('express-async-errors');
 

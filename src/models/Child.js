@@ -5,12 +5,10 @@ const childSchema = new mongoose.Schema({
     type: String, 
     required: true
   },
-  nome_da_mae: {
-    type: String, 
+  parente: {
+    type: mongoose.Types.ObjectId,
+    ref: 'User',
     required: true
-  },
-  nome_do_pai: {
-    type: String
   },
   municipio_nascimento: {
     type: String,

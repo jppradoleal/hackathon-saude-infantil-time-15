@@ -8,7 +8,6 @@ const errorHandler = (error, req, res, next) => {
         error.inner.forEach(err => {
             errors[err.path] = err.errors;
         });
-
         return res.status(400).json({ message: 'Validation fails', errors})
     }
 

@@ -5,8 +5,14 @@ const childSchema = new mongoose.Schema({
     type: mongoose.Types.ObjectId,
     ref: 'Child'
   },
-  peso: Number,
-  altura: Number,
+  peso: {
+    type: Number,
+    default: 0
+  },
+  altura: {
+    type: Number,
+    default: 0
+  },
 }, {
   timestamps: true
 });

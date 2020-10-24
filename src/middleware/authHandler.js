@@ -1,0 +1,29 @@
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const User = require('../models/User');
+
+module.exports = {
+  async authenticate(req, res, next) {
+    const token = req.headers["Authorization"].split(' ')[1]; // Bearer {token}
+
+    const decoded = await jwt.verify(token, process.env.SECRET);
+
+    req.email = decoded.email;
+    req.id = decoded.id;
+
+    next();
+  },
+  async login(req, res) {
+    const { email, senha } = req.body;
+
+    const user = await User.findOne({email});
+
+    if(user) {
+      await bcrypt.compare(senha, user.senha);
+      const token = await jwt.sign({ email, id: user.id }, process.env.SECRET);
+      return res.json({ message: 'User authenticated', token});
+    }
+
+    return res.status(400).json({ message: 'User not found!' });
+  }
+}
