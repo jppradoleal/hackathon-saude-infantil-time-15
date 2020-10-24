@@ -9,11 +9,11 @@ router.get('/', (req, res) => {
 });
 
 // Child Registries Routes
-router.post('/child', ChildController.store);
+router.post('/child', authHandler.authenticate, ChildController.store);
 router.get('/child', ChildController.index);
 router.get('/child/:id', ChildController.show);
-router.put('/child/update/:id', ChildController.update);
-router.delete('/child/delete/:id', ChildController.delete);
+router.put('/child/update/:id', authHandler.authenticate, ChildController.update);
+router.delete('/child/delete/:id', authHandler.authenticate, ChildController.delete);
 
 // Login and Create User Routes;
 router.post('/user/login', authHandler.login);

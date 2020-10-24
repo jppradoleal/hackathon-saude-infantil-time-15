@@ -4,14 +4,21 @@ const User = require('../models/User');
 
 module.exports = {
   async authenticate(req, res, next) {
-    const token = req.headers["Authorization"].split(' ')[1]; // Bearer {token}
+    try { 
+      const token = req.headers["authorization"].split(' ')[1]; // Bearer {token} 
 
-    const decoded = await jwt.verify(token, process.env.SECRET);
+      const decoded = await jwt.verify(token, process.env.SECRET);
+      
+      req.user = {};
 
-    req.email = decoded.email;
-    req.id = decoded.id;
-
-    next();
+      req.user["email"] = decoded.email;
+      req.user["id"] = decoded.id;
+      
+      next();
+    } catch (err) {
+      console.log(err);
+      return res.status(400).json({message: 'Not authorized'});
+    }
   },
   async login(req, res) {
     const { email, senha } = req.body;

@@ -1,3 +1,4 @@
+const User = require('../models/User');
 const Child = require('../models/Child');
 const ChildData = require('../models/ChildData');
 const yup = require('yup');
@@ -8,7 +9,7 @@ module.exports = {
     
     const child = await Child.findById(id);
 
-    return res.json({ message: "Child registry found", child })
+    return res.json({ message: 'Child registry found', child })
   },
 
   async index(req, res) {
@@ -16,62 +17,24 @@ module.exports = {
     
     return res.json({ message: 
       childs.length ? 
-        "Multiple children registries found" : 
-        "No children registries found", 
+        'Multiple children registries found' : 
+        'No children registries found', 
       childs});
   },
 
   async store(req, res) {
-    const {
-      nome_da_crianca,
-      nome_da_mae,
-      nome_do_pai,
-      municipio_nascimento,
-      endereco,
-      ponto_referencia,
-      telefone,
-      bairro,
-      cep,
-      cidade,
-      uf,
-      sexo_biologico,
-      raca,
-      endereco_un_basica_frequentada,
-      num_prontuario,
-      num_declaracao_nascido_vivo,
-      num_registro_civil_nascimento,
-      num_cartao_sus,
-      data_de_nascimento,
-      peso,
-      altura
-    } = req.body;
+    const receivedData = req.body;
+
+    const { _id } = await User.findById(req.user.id);
 
     const data = {
-      nome_da_crianca,
-      nome_da_mae,
-      nome_do_pai,
-      municipio_nascimento,
-      endereco,
-      ponto_referencia,
-      telefone,
-      bairro,
-      cep,
-      cidade,
-      uf,
-      sexo_biologico,
-      raca,
-      endereco_un_basica_frequentada,
-      num_prontuario,
-      num_declaracao_nascido_vivo,
-      num_registro_civil_nascimento,
-      num_cartao_sus,
-      data_de_nascimento
+      ...receivedData,
+      parente: _id
     }
 
     const schema = yup.object().shape({
       nome_da_crianca: yup.string().required(),
-      nome_da_mae: yup.string().required(),
-      nome_do_pai: yup.string().required(),
+      parente: yup.string().required(),
       municipio_nascimento: yup.string().required(),
       endereco: yup.string().required(),
       ponto_referencia: yup.string(),
@@ -92,73 +55,28 @@ module.exports = {
 
     await schema.validate(data, { abortEarly: false });
   
-    const child = await Child.create(data);
+    const child = await (await Child.create(data)).populate('parente', '-senha').execPopulate();
     
     const dataChild = {
       id_crianca: child.id,
-      peso,
-      altura
+      peso:data.peso,
+      altura: data.altura
     };
 
     const childData = await ChildData.create(dataChild);
 
-    return res.json({ message: "Child registered", child: {
+    return res.json({ message: 'Child registered', child: {
       ...child._doc,
       child_data: {...childData._doc}
     } });
   },
   async update(req, res) {
     const { id } = req.params;
-    const {
-      nome_da_crianca,
-      nome_da_mae,
-      nome_do_pai,
-      municipio_nascimento,
-      endereco,
-      ponto_referencia,
-      telefone,
-      bairro,
-      cep,
-      cidade,
-      uf,
-      sexo_biologico,
-      raca,
-      endereco_un_basica_frequentada,
-      num_prontuario,
-      num_declaracao_nascido_vivo,
-      num_registro_civil_nascimento,
-      num_cartao_sus,
-      data_de_nascimento,
-      peso,
-      altura
-    } = req.body;
-
-    const data = {
-      nome_da_crianca,
-      nome_da_mae,
-      nome_do_pai,
-      municipio_nascimento,
-      endereco,
-      ponto_referencia,
-      telefone,
-      bairro,
-      cep,
-      cidade,
-      uf,
-      sexo_biologico,
-      raca,
-      endereco_un_basica_frequentada,
-      num_prontuario,
-      num_declaracao_nascido_vivo,
-      num_registro_civil_nascimento,
-      num_cartao_sus,
-      data_de_nascimento
-    }
+    const data = req.body;
 
     const schema = yup.object().shape({
       nome_da_crianca: yup.string().required(),
-      nome_da_mae: yup.string().required(),
-      nome_do_pai: yup.string().required(),
+      parente: yup.string().required(),
       municipio_nascimento: yup.string().required(),
       endereco: yup.string().required(),
       ponto_referencia: yup.string(),
@@ -179,13 +97,14 @@ module.exports = {
 
     await schema.validate(data, { abortEarly: false });
 
-    const child = await Child.findByIdAndUpdate(id, data, { new: true });
-    const childData = await ChildData.findOneAndUpdate(
-      { id_crianca: child._id }, 
-      { peso, altura }
-    );
+    const child = await Child.findOne(id);
 
-    return res.json({ message: "Child registry updated successfully", child: {
+    if(child.parente === req.user.id) 
+      await Child.updateOne(child, data);
+    
+    const childData = await ChildData.create({ id_crianca: child._id, peso, altura });
+
+    return res.json({ message: 'Child registry updated successfully', child: {
       ...child,
       child_data: {...childData}
     } });
@@ -193,8 +112,11 @@ module.exports = {
   async delete(req, res) {
     const { id } = req.params;
 
-    await Child.findOneAndDelete(id);
+    const child = await Child.findById(id);
 
-    return res.json({ message: "Child registry deleted successfully"})
+    if(child.parente === req.user.id) 
+      await Child.deleteOne(child);
+
+    return res.json({ message: 'Child registry deleted successfully'})
   },
 }
