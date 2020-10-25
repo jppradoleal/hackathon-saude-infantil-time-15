@@ -7,7 +7,7 @@
 <br />
 
 # 📚 Sobre:
-Diante do grande problema da inconsistência de dados disponibilizados e a elitização de informações detalhadas no SisVan e outros sistemas, nós do time 15 decidimos gerar novos dados! A Caderneta Digital se disponibiliza como uma ferramenta para auxiliar os pais no monitoramento da saúde dos seus filhos, enquanto fornece dados a nutricionistas.
+Diante do grande problema da inconsistência de dados disponibilizados e a falta de informações detalhadas no SisVan e outros sistemas, nós do time 15 decidimos gerar novos dados! A Caderneta Digital se disponibiliza como uma ferramenta para auxiliar os pais no monitoramento da saúde dos seus filhos, enquanto fornece dados a nutricionistas.
 
 # 🔧 Tecnologias
 * NodeJS.
