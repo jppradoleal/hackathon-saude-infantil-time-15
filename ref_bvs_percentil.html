@@ -1,0 +1,696 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="keywords" content="C�lculo, de, IMC, infantil"/>
+        <meta name="description" content="Calculadoras m�dicas para posologia de drogas, testes de estados e medi��o de massa corp�rea."/>
+        <link rel="stylesheet" href="css/style-pt.css" type="text/css" media="screen"/>
+        <link type="text/css" href="css/layout.css" rel="stylesheet"/>
+
+        <script type="text/javascript" src="js/lib.js"></script>
+        <script type="text/javascript" src="js/formulas.js"></script>
+
+                <script type="text/javascript">
+            window.onload = function(){
+                var input = document.getElementsByTagName('input');
+
+                for( var i = 0; i < input.length; i++ ){
+                    if( input[i].type === 'text' ){
+                        if ( input[i].className === 'integer' ){
+                            MaskInput(input[i],"9^");
+                        } else if ( input[i].className === 'float' ){
+                            MaskInput(input[i],"9^,");
+                        }
+                        input[i].onfocus = function(evt) {
+                            if( this.value === "0" ) {
+                                this.value = "";
+                            }
+                        }
+                        input[i].onblur = function(evt) {
+                            if( this.value === "" ) {
+                                this.value = "0";
+                            }
+                        }
+                    }
+                }
+            }
+        </script>
+            </head>
+    <body class="calculadoras">
+        <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="pingback" href="https://aps.bvs.br/xmlrpc.php">
+<title>Página: 7 &#8211; BVS Atenção Primária em Saúde</title>
+<link rel='dns-prefetch' href='//use.fontawesome.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Feed para BVS Atenção Primária em Saúde &raquo;" href="https://aps.bvs.br/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para BVS Atenção Primária em Saúde &raquo;" href="https://aps.bvs.br/comments/feed/" />
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.11.0 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.11.0';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+
+	var disableStr = 'ga-disable-UA-624952-20';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+
+	if ( 'undefined' === typeof gaOptout ) {
+		function gaOptout() {
+			__gaTrackerOptout();
+		}
+	}
+
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-624952-20', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/aps.bvs.br\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.2"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://aps.bvs.br/wp-includes/css/dist/block-library/style.min.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wpzoom-social-icons-block-style-css'  href='https://aps.bvs.br/wp-content/plugins/social-icons-widget-by-wpzoom/block/dist/blocks.style.build.css?ver=1594664925' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='https://aps.bvs.br/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='menu-image-css'  href='https://aps.bvs.br/wp-content/plugins/menu-image/includes/css/menu-image.css?ver=2.9.6' type='text/css' media='all' />
+<link rel='stylesheet' id='yop-public-css'  href='https://aps.bvs.br/wp-content/plugins/yop-poll/public/assets/css/yop-poll-public-6.1.6.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='https://aps.bvs.br/wp-includes/css/dashicons.min.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-bootstrap-starter-bootstrap-css-css'  href='https://aps.bvs.br/wp-content/themes/wp-bvs-aps/inc/assets/css/bootstrap.min.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-bootstrap-pro-fontawesome-cdn-css'  href='https://use.fontawesome.com/releases/v5.1.0/css/all.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-bootstrap-starter-style-css'  href='https://aps.bvs.br/wp-content/themes/wp-bvs-aps/style.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='custom-style-css'  href='https://aps.bvs.br/wp-content/themes/wp-bvs-aps/assets/css/style.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='yop-poll-custom-styles-css'  href='https://aps.bvs.br/wp-content/themes/wp-bvs-aps/poll/yop_poll.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wpzoom-social-icons-socicon-css'  href='https://aps.bvs.br/wp-content/plugins/social-icons-widget-by-wpzoom/assets/css/wpzoom-socicon.css?ver=1594664925' type='text/css' media='all' />
+<link rel='stylesheet' id='wpzoom-social-icons-genericons-css'  href='https://aps.bvs.br/wp-content/plugins/social-icons-widget-by-wpzoom/assets/css/genericons.css?ver=1594664925' type='text/css' media='all' />
+<link rel='stylesheet' id='wpzoom-social-icons-academicons-css'  href='https://aps.bvs.br/wp-content/plugins/social-icons-widget-by-wpzoom/assets/css/academicons.min.css?ver=1594664925' type='text/css' media='all' />
+<link rel='stylesheet' id='wpzoom-social-icons-font-awesome-3-css'  href='https://aps.bvs.br/wp-content/plugins/social-icons-widget-by-wpzoom/assets/css/font-awesome-3.min.css?ver=1594664925' type='text/css' media='all' />
+<script type='text/javascript' src='https://aps.bvs.br/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://aps.bvs.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var objectL10n = {"yopPollParams":{"urlParams":{"ajax":"https:\/\/aps.bvs.br\/wp-admin\/admin-ajax.php","wpLogin":"https:\/\/aps.bvs.br\/wp-login.php?redirect_to=https%3A%2F%2Faps.bvs.br%2Fwp-admin%2Fadmin-ajax.php%3Faction%3Dyop_poll_record_wordpress_vote"},"apiParams":{"reCaptcha":{"siteKey":""},"reCaptchaV2Invisible":{"siteKey":""}},"captchaParams":{"imgPath":"https:\/\/aps.bvs.br\/wp-content\/plugins\/yop-poll\/public\/assets\/img\/","url":"https:\/\/aps.bvs.br\/wp-content\/plugins\/yop-poll\/app.php","accessibilityAlt":"Sound icon","accessibilityTitle":"Accessibility option: listen to a question and answer it!","accessibilityDescription":"Type below the <strong>answer<\/strong> to what you hear. Numbers or words:","explanation":"Click or touch the <strong>ANSWER<\/strong>","refreshAlt":"Refresh\/reload icon","refreshTitle":"Refresh\/reload: get new images and accessibility option!"},"voteParams":{"invalidPoll":"Invalid Poll","noAnswersSelected":"No answer selected","minAnswersRequired":"At least {min_answers_allowed} answer(s) required","maxAnswersRequired":"A max of {max_answers_allowed} answer(s) accepted","noAnswerForOther":"No other answer entered","noValueForCustomField":"{custom_field_name} is required","consentNotChecked":"You must agree to our terms and conditions","noCaptchaSelected":"Captcha is required","thankYou":"Thank you for your vote"},"resultsParams":{"singleVote":"vote","multipleVotes":"votes","singleAnswer":"answer","multipleAnswers":"answers"}}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://aps.bvs.br/wp-content/plugins/yop-poll/public/assets/js/yop-poll-public-6.1.6.min.js?ver=5.4.2'></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://aps.bvs.br/wp-content/themes/wp-bvs-aps/inc/assets/js/html5.js?ver=3.7.0'></script>
+<![endif]-->
+<script type='text/javascript' src='https://aps.bvs.br/wp-content/themes/wp-bvs-aps/assets/js/script.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://aps.bvs.br/wp-content/themes/wp-bvs-aps/assets/js/secure-searchbox.js?ver=5.4.2'></script>
+<link rel='https://api.w.org/' href='https://aps.bvs.br/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://aps.bvs.br/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://aps.bvs.br/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 5.4.2" />
+    <style type="text/css">
+        #page-sub-header { background: #fff; }
+    </style>
+    <style type="text/css">/** Mega Menu CSS: fs **/</style>
+</head>
+
+<body class="hfeed">
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+    	<header id="masthead" class="site-header navbar-static-top navbar-light" role="banner">
+        <div id="logo-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="brand-logo">
+                                                            <a href="https://aps.bvs.br/">
+                                    <img src="https://aps.bvs.br/wp-content/uploads/2018/10/logo.png" alt="BVS Atenção Primária em Saúde">
+                                </a>
+
+                        </div>
+                        <div class="brand-info">
+                            <h1>BVS Atenção Primária em Saúde</h1>
+                            <h2>Traduzindo o conhecimento científico para a prática do cuidado à saúde</h2>
+                        </div>
+                        <div class="lang-social-networks">
+                                                    </div>
+                        <div class="institution-logo">
+                            <img src="https://aps.bvs.br/wp-content/themes/wp-bvs-aps/assets/img/telessaude.png" alt="Programa Nacional TelesSaúde Brasil Redes" class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="menu-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <nav class="navbar navbar-expand-xl p-0">
+                            <div id="main-nav" class="collapse navbar-collapse justify-content-start"><ul id="menu-menu-principal" class="navbar-nav"><li id="menu-item-40940" class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-40940"><a title="Home" href="/" class="nav-link">Home</a></li>
+<li id="menu-item-40941" class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-40941 dropdown"><a title="BVS APS" href="#" data-toggle="dropdown" class="dropdown-toggle nav-link" aria-haspopup="true">BVS APS <span class="caret"></span></a>
+<ul role="menu" class=" dropdown-menu">
+	<li id="menu-item-40942" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-40942"><a title="Sobre a BVS APS" href="https://aps.bvs.br/sobre/" class="dropdown-item">Sobre a BVS APS</a></li>
+	<li id="menu-item-41156" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-41156"><a title="Quais são os conteúdos?" href="https://aps.bvs.br/quais-sao-os-conteudos/" class="dropdown-item">Quais são os conteúdos?</a></li>
+	<li id="menu-item-40944" class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-40944"><a title="Como é atualizada?" href="#" class="dropdown-item">Como é atualizada?</a></li>
+	<li id="menu-item-40945" class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-40945"><a title="Como usar?" href="#" class="dropdown-item">Como usar?</a></li>
+</ul>
+</li>
+<li id="menu-item-40949" class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-40949 dropdown"><a title="Segunda Opinião Formativa" href="#" data-toggle="dropdown" class="dropdown-toggle nav-link" aria-haspopup="true">Segunda Opinião Formativa <span class="caret"></span></a>
+<ul role="menu" class=" dropdown-menu">
+	<li id="menu-item-41176" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-41176"><a title="O que é?" href="https://aps.bvs.br/segunda-opiniao-formativa/" class="dropdown-item">O que é?</a></li>
+	<li id="menu-item-41173" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-41173"><a title="Quais são os temas tratados?" href="https://aps.bvs.br/quais-sao-os-temas-tratados-na-sof/" class="dropdown-item">Quais são os temas tratados?</a></li>
+	<li id="menu-item-41174" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-41174"><a title="Como está estruturada?" href="https://aps.bvs.br/como-esta-estruturada-a-sof/" class="dropdown-item">Como está estruturada?</a></li>
+	<li id="menu-item-41175" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-41175"><a title="Como é produzida?" href="https://aps.bvs.br/como-sao-produzidas/" class="dropdown-item">Como é produzida?</a></li>
+	<li id="menu-item-41172" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-41172"><a title="Outras perguntas e respostas" href="https://aps.bvs.br/perguntas-e-respostas-frequentes/" class="dropdown-item">Outras perguntas e respostas</a></li>
+</ul>
+</li>
+<li id="menu-item-40954" class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-40954 dropdown"><a title="Programa Telessaúde" href="#" data-toggle="dropdown" class="dropdown-toggle nav-link" aria-haspopup="true">Programa Telessaúde <span class="caret"></span></a>
+<ul role="menu" class=" dropdown-menu">
+	<li id="menu-item-41212" class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-41212"><a title="Sobre o Programa" href="http://www.saude.gov.br/telessaude" class="dropdown-item">Sobre o Programa</a></li>
+</ul>
+</li>
+<li id="menu-item-41010" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-41010"><a title="Núcleos de Telessaúde" href="https://aps.bvs.br/rede-de-colaboradores/" class="nav-link">Núcleos de Telessaúde</a></li>
+</ul></div>                        </nav>
+
+                        <div class="social-media">
+                                                            <div class="widget">
+
+        <ul class="zoom-social-icons-list zoom-social-icons-list--without-canvas zoom-social-icons-list--round zoom-social-icons-list--no-labels">
+
+
+                                <li class="zoom-social_icons-list__item">
+                    <a class="zoom-social_icons-list__link"
+                       href="https://www.facebook.com/telessaudebrasilredes/" target="_blank" >
+
+                                                    <span class="screen-reader-text">facebook</span>
+
+                        <span class="zoom-social_icons-list-span social-icon socicon socicon-facebook" data-hover-rule="color" data-hover-color="#99c8e9" style="color : #99c8e9; font-size: 28px; padding:3px" ></span>
+
+                                            </a>
+                </li>
+
+
+                                <li class="zoom-social_icons-list__item">
+                    <a class="zoom-social_icons-list__link"
+                       href="https://www.youtube.com/user/comunidadedepraticas/videos" target="_blank" >
+
+                                                    <span class="screen-reader-text">youtube</span>
+
+                        <span class="zoom-social_icons-list-span social-icon fa fa-youtube" data-hover-rule="color" data-hover-color="#99c8e9" style="color : #99c8e9; font-size: 28px; padding:3px" ></span>
+
+                                            </a>
+                </li>
+
+
+                                <li class="zoom-social_icons-list__item">
+                    <a class="zoom-social_icons-list__link"
+                       href="/contato/" target="_blank" >
+
+                                                    <span class="screen-reader-text">envelope-square</span>
+
+                        <span class="zoom-social_icons-list-span social-icon fa fa-envelope-square" data-hover-rule="color" data-hover-color="#99c8e9" style="color : #99c8e9; font-size: 28px; padding:3px" ></span>
+
+                                            </a>
+                </li>
+
+
+        </ul>
+
+        </div>                                                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</header><!-- #masthead -->
+    	<div id="content" class="site-content">
+
+        <section id="pesquisa-bvs" class="pages">
+            <div class="container">
+                                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="widget">
+        <form class="vhl-search-form" action="https://pesquisa.bvsalud.org/aps/" method="get" id="searchForm" onsubmit="if(searchForm.q.value=='Pesquisar') searchForm.q.value = '';">
+
+            <input type="hidden" name="home_url" value="https://aps.bvs.br" />
+            <input type="hidden" name="home_text" value="BVS Atenção Primária em Saúde" />
+            <label for="vhl-search-input" class="sr-only">Pesquisar</label>
+
+            <div class="input-group">
+                <input type="text" id="vhl-search-input" class="vhl-search-input form-control" name="q" placeholder="Pesquisar" value="Pesquisar" onfocus="if(this.value=='Pesquisar') this.value = '';" onblur="if(this.value=='') this.value = 'Pesquisar';" data-toggle="tooltip" data-html="true" title="<h4><span class='fas fa-lightbulb'></span>Dica de pesquisa</h4>
+                    <p>Para buscar por palavras do t&iacute;tulo utilize</p>
+                    <div class='alert alert-secondary' role='alert'>TI:(sua busca)</div>
+                    <a target='_blank' href='/dicas-de-pesquisa'>Ver mais dicas de pesquisa</a>" />
+                <div class="input-group-append">
+                    <button type="submit" class="vhl-search-submit submit btn btn-primary">
+                        <span class="fas fa-search"></span>
+                    </button>
+                </div>
+            </div>
+
+            <a target='_blank' href="https://aps.bvs.br/sobre/?l=pt_BR" class="btn btn-primary btn-circle" data-toggle="tooltip" data-placement="bottom" title="Acesse os tutoriais de como pesquisar na BVS APS">?</a>
+        </form>
+        <form style="display: none;" class="default-search-form" role="search" action="http://pesquisa.bvsalud.org/aps/" method="get" id="defaultSearchForm" onsubmit="if(defaultSearchForm.s.value=='Pesquisar') defaultSearchForm.s.value = '';">
+
+            <input type="hidden" name="filter[db][]" value="SOF">
+
+            <label for="s" class="sr-only">Pesquisar</label>
+            <div class="input-group">
+                <input type="text" id="s" class="vhl-search-input form-control" name="q" placeholder="Pesquisar" value="Pesquisar" onfocus="if(this.value=='Pesquisar') this.value = '';" onblur="if(this.value=='') this.value = 'Pesquisar';"/>
+                <div class="input-group-append">
+                    <button type="submit" class="vhl-search-submit submit btn btn-primary">
+                        <span class="fas fa-search"></span>
+                    </button>
+                </div>
+            </div>
+	<!--
+            <a target='_blank' href="https://aps.bvs.br/sobre/?l=pt_BR" class="btn btn-primary btn-circle" data-toggle="tooltip" data-placement="bottom" title="Acesse os tutoriais de como pesquisar na BVS APS">?</a>
+	-->
+        </form>
+        <div class="searchItens">
+            <input type="radio" name="engine" checked="checked" value="op2" id="search-op2" />
+            <label for="search-op2">Coleção da SOF</label>
+
+            <input type="radio" name="engine" value="op1" id="search-op1" />
+            <label for="search-op1">Toda a coleção</label>
+        </div>
+
+        </div>                    </div>
+                </div>
+
+            </div>
+        </section>
+
+		<div class="container">
+			<div class="row">
+                        <div class="container">
+            <div class="level2">
+                <div class="middle">
+                    <div id="collection">
+                        <h3><span>Rede Telessa&uacute;de Brasil</span></h3>
+                        <div id="breadCrumb">
+                            <a href="/?l=pt_BR">home</a>
+                            &gt; <a href="/apps/calculadoras/index.php">Calculadoras</a>
+                            &gt Cálculo de IMC infantil                        </div>
+                    </div>
+                    <div class="content">
+                        <style type="text/css">/* <![CDATA[ */
+pre input {
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: #000;
+    text-align: center;
+    width: 3em;
+}
+
+#diagnostisco {
+    text-decoration: underline;
+}
+
+tbody.l1 tr.l1,
+tbody.l2 tr.l2,
+tbody.l3 tr.l3,
+tbody.l4 tr.l4,
+tbody.l5 tr.l5,
+tbody.l6 tr.l6 {
+    background-color: #FF0;
+}
+
+/* ]]> */
+</style>
+
+<script type="text/javascript" src="imc/bfa_boys_p_exp.js"></script>
+<script type="text/javascript" src="imc/bfa_girls_p_exp.js"></script>
+<script type="text/javascript" src="imc/bmi_boys_perc_5-19_exp.js"></script>
+<script type="text/javascript" src="imc/bmi_girls_perc_5-19_exp.js"></script>
+
+<script type="text/javascript">
+
+    function calcular_imc( ){
+        var meses, dias = 0, diff = 999999;
+        var peso = document.forms.imc.peso.value;
+        var altura = document.forms.imc.altura.value;
+        var result = '', perc = '';
+        var ref = null;
+
+        if( peso.match(/^[0-9]+(,[0-9]+)?$/) ){
+            peso = parseFloat(peso.replace(',','.'));
+        } else {
+            alert("O valor fornecido para peso está incorreto.");
+            return false;
+        }
+
+        if( altura.match(/^[0-9]+(,[0-9]+)?$/) ){
+            altura = parseFloat(altura.replace(',','.'));
+            if( altura <= 0 ){
+                alert("O valor fornecido para altura não pode ser zero");
+                return false;
+            }
+        } else {
+            alert("O valor fornecido para altura está incorreto.");
+            return false;
+        }
+
+        if( document.imc.anos.value.match(/^[0-9]+$/) )
+            dias += parseInt(document.imc.anos.value) * 365;
+        else{
+            alert("Formato para 'ano' incorreto");
+            return false;
+        }
+
+        if( document.imc.meses.value.match(/^[0-9]+$/) )
+            dias += parseInt(document.imc.meses.value) * 30;
+        else{
+            alert("Formato para 'meses' incorreto");
+            return false;
+        }
+
+        if( document.imc.semanas.value.match(/^[0-9]+$/) )
+            dias += parseInt(document.imc.semanas.value) * 7;
+        else {
+            alert("Formato para 'semanas' incorreto");
+            return false;
+        }
+
+        if( document.imc.dias.value.match(/^[0-9]+$/) )
+            dias += parseInt(document.imc.dias.value);
+        else{
+            alert("Formato para 'dias' incorreto");
+            return false;
+        }
+
+        if( dias < 1857 )
+            ref = document.forms.imc.sexo[0].checked?b0_5[ dias ]:g0_5[ dias ];
+        else{
+            meses = Math.floor(dias/30);
+            if( meses > 231 ){
+                alert("A idade não deve ultrapassar 19 anos (228) meses");
+                return false;
+            }
+            meses = (meses>228) ? 228 : meses;
+            meses = meses - 61;
+
+            ref = document.forms.imc.sexo[0].checked?b5_19[meses]:g5_19[meses];
+        }
+
+
+        var imc = calculateIMC(peso,altura);
+
+        var str_peso = peso + '';
+        str_peso = str_peso.replace('.',',');
+
+        var str_imc = imc + '';
+        str_imc = str_imc.replace(/\.(\d{1,2})\d*$/,',$1');
+
+        var str_pow_altura = (altura*altura) + '';
+        str_pow_altura = str_pow_altura.replace(/\.(\d{1,2})\d*$/,',$1');
+
+        document.getElementById('peso').value = str_peso;
+        document.getElementById('altura').value = str_pow_altura;
+        document.getElementById('imc_total').innerHTML = str_imc;
+
+        if( imc < ref.p3 ){
+            result = 'Baixo IMC para idade';
+        } else if( imc >= ref.p3 && imc <= ref.p85 ){
+            result = 'IMC adequado ou Eutrófico';
+        } else if( imc >= ref.p85 && imc <= ref.p97 ){
+            result = 'Sobrepeso';
+        } else if( imc >= ref.p97 ){
+            result = 'Obesidade';
+        }
+
+        for (var i in ref ){
+            if( Math.abs(ref[i] - imc) < diff ){
+                diff = Math.abs(ref[i] - imc);
+                perc = i;
+            }
+        }
+
+        result += ', Valor ';
+        result += (imc < ref[perc])?'menor':'maior';
+        result += ' e mais próximo de ';
+        result += perc.toUpperCase() + '('+ref[perc]+')';
+
+        document.getElementById('result').innerHTML = result;
+
+        return false;
+    }
+</script>
+
+<h3>Cálculo do Índice de Massa Corporal (IMC)</h3>
+
+<h4>Descrição</h4>
+<p>
+O diagnóstico e os testes para aferição de sobrepeso e obesidade são controversos
+em crianças. O IMC na criança e no adolescente está relacionado com a idade e o
+estágio de maturação sexual. Na prática, utiliza-se a medida do peso e da altura
+por serem facilmente obtidos no exame físico. A criança e o adolescente obesos
+tendem a ser adultos obesos. 40% das crianças e 70% dos adolescentes obesos se
+tornarão adultos obesos.
+</p>
+
+<h4>Uso</h4>
+<p>
+    Avaliação do estado nutricional de crianças e adolescentes.
+</p>
+
+<h4>Calculadora</h4>
+<form name="imc" onsubmit="return calcular_imc();">
+    <ul>
+        <li>Peso: <input type="text"  name="peso" value="0" class="float"/>Kg</li>
+        <li>Altura: <input type="text" name="altura" value="0" class="float"/>m</li>
+        <li>
+            Sexo:
+            <ul>
+                <li><input type="radio" name="sexo" value="m" checked="true"/>masculino</li>
+                <li><input type="radio" name="sexo" value="f"/>feminino</li>
+            </ul>
+        </li>
+        <li>
+            Idade:
+            <ul>
+                <li><input type="text"  name="anos" class="integer" value="0"/>anos e</li>
+                <li><input type="text"  name="meses" class="integer" value="0"/>meses e</li>
+                <li><input type="text"  name="semanas" class="integer" value="0"/>semanas e</li>
+                <li><input type="text"  name="dias" class="integer" value="0"/>dias</li>
+            </ul>
+        </li>
+        <li><input type="button" value="Calcular" onclick="calcular_imc();"/></li>
+    </ul>
+</form>
+
+<pre style="font-family: courier;">
+IMC = <u>  Peso kg  </u>  = <input type="text" id="peso" value="0"/> = <span id="imc_total">0</span> Kg/ m<sup>2</sup>
+      (altura m)<sup>2 </sup>   <input type="text" id="altura" value="0" style="border: 0px solid"/>
+</pre>
+
+Diagnóstico = <b id="result">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</b>
+
+<h4>Valores de referência</h4>
+<table border="0" cellpadding="4" cellspacing="1">
+    <thead>
+        <tr valign="top">
+            <th>Baixo IMC para idade</th>
+            <th>IMC adequado ou Eutrófico</th>
+            <th>Sobrepeso</th>
+            <th>Obesidade</th>
+        </tr>
+    </thead>
+    <tbody id="reftable">
+        <tr>
+            <td>&lt; Percentil 3</td>
+            <td>&ge; Percentil 3 e &lt; Percentil 85  </td>
+            <td>&ge; Percentil 85 e &lt; Percentil 97  </td>
+            <td>&ge; Percentil 97</td>
+        </tr>
+    </tbody>
+</table>
+<p class="vref">
+    <img src="img/bfa_boys_p_exp.png"/>
+    <img src="img/bfa_girls_p_exp.png"/>
+    <img src="img/bmi_boys_perc_5-19_exp.png"/>
+    <img src="img/bmi_girls_perc_5-19_exp.png"/>
+</p>
+
+<h4>Público-alvo</h4>
+<p>
+    Profissionais de atenção primária.
+</p>
+
+<h4>Área</h4>
+<p>
+    Saúde da criança e do adolescente.
+</p>
+
+<h4>Referências</h4>
+<p>
+    Duncan BB, Schmidt MI, Giugliani ERJ, organizadores. Medicina ambulatorial: condutas
+    de atenção primária baseada em evidências. 3<sup>a</sup> Ed. Porto Alegre: Artmed
+    Editora; 2004.
+</p>
+
+<p>
+http://nutricao.saude.gov.br/sisvan.php?conteudo=curvas_cresc_oms, acessado em 07/07/2009.
+</p>
+
+<p>
+http://www.who.int/childgrowth/standards/bmi_for_age/en/index.html
+</p>
+                    </div>
+                    <div class="bottom">
+                    </div>
+                </div>
+            </div>
+        </div>
+        			</div><!-- .row -->
+		</div><!-- .container -->
+	</div><!-- #content -->
+    	<footer id="colophon" class="site-footer navbar-light" role="contentinfo">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="site-certificate col-12 col-sm-12 col-md-3">
+                                            <img src="https://aps.bvs.br/wp-content/themes/wp-bvs-aps/assets/img/certificado.png" alt="Site Certificate">
+                                    </div>
+
+                <div class="col-12 col-sm-12 col-md-7 site-support">
+                    <a href="https://www.paho.org/bra/" target="_blank">
+                        <img src="https://aps.bvs.br/wp-content/themes/wp-bvs-aps/assets/img/footer/org-panamericana.png" alt="Organização Pan-Americana da Saúde" class="img-fluid"/>
+                    </a>
+
+                    <a href="http://www.who.int/eportuguese/countries/bra/pt/" target="_blank">
+                        <img src="https://aps.bvs.br/wp-content/themes/wp-bvs-aps/assets/img/footer/org-mundial-saude.png" alt="Organização Mundial da Saúde" class="img-fluid"/>
+                    </a>
+
+                    <a href="http://www.bireme.br/" target="_blank">
+                        <img src="https://aps.bvs.br/wp-content/themes/wp-bvs-aps/assets/img/footer/bireme.png" alt="Bireme" class="img-fluid"/>
+                    </a>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-2 text-right site-support">
+                    <a href="http://portalms.saude.gov.br/" target="_blank">
+                        <img src="https://aps.bvs.br/wp-content/themes/wp-bvs-aps/assets/img/footer/ministerio-saude.png" alt="Ministério da Saúde" class="img-fluid"/>
+                    </a>
+                </div>
+
+            </div>
+
+                        <div class="row">
+                <div class="site-info col-12 col-sm-12 col-md-12">
+                        <div>			<div class="textwidget"><b>BVS APS Atenção Primária à Saúde </b><br>
+Uma iniciativa do Ministério da Saúde e BIREME/OPAS/OMS em parceria com as instituições do Programa Telessaúde Brasil Redes<br>
+Rua Vergueiro, 1759 •  04101-000 • São Paulo/SP • Brasil
+Tel: (55 11) 5576-9800 • Fax: (55 11) 5575-8868<br/>
+
+<br/><p><a href="http://politicas.bireme.org/terminos/pt/index.html" target="_blank" rel="noopener noreferrer">Termos e Condições de uso</a> | <a href="http://politicas.bireme.org/privacidad/pt/index.html" target="_blank" rel="noopener noreferrer">Politicas de Privacidade</a></p><br/>
+
+</div>
+		</div>
+                </div><!-- close .site-info -->
+            </div>
+                    </div>
+    </footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/aps.bvs.br\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://aps.bvs.br/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.2'></script>
+<script type='text/javascript' src='https://aps.bvs.br/wp-content/themes/wp-bvs-aps/inc/assets/js/popper.min.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://aps.bvs.br/wp-content/themes/wp-bvs-aps/inc/assets/js/bootstrap.min.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://aps.bvs.br/wp-content/themes/wp-bvs-aps/inc/assets/js/theme-script.min.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://aps.bvs.br/wp-content/themes/wp-bvs-aps/inc/assets/js/skip-link-focus-fix.min.js?ver=20151215'></script>
+<script type='text/javascript' src='https://aps.bvs.br/wp-content/plugins/social-icons-widget-by-wpzoom/assets/js/social-icons-widget-frontend.js?ver=1594664925'></script>
+<script type='text/javascript' src='https://aps.bvs.br/wp-content/plugins/page-links-to/dist/new-tab.js?ver=3.3.3'></script>
+<script type='text/javascript' src='https://aps.bvs.br/wp-includes/js/hoverIntent.min.js?ver=1.8.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var megamenu = {"timeout":"300","interval":"100"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://aps.bvs.br/wp-content/plugins/megamenu/js/maxmegamenu.js?ver=2.8'></script>
+<script type='text/javascript' src='https://aps.bvs.br/wp-includes/js/wp-embed.min.js?ver=5.4.2'></script>
+</body>
+</html>    </body>
+</html>
