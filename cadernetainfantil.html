@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Caderneta Digital</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .columnUp {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 300px;
+        }
+
+        .columnDown {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 100px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .imgCenter {
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (max-width: 600px) {
+            .column {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="columnUp">
+            <h1>Caderneta Digital da Saúde da Criança</h1>
+            <p>Acompanhe o desenvolvimento saudável da criança e receba os melhores conteúdos sobre o assunto.</p>
+            <button>Cadastrar</button>
+        </div>
+
+        <div class="columnUp">
+            <img src="caderneta.png" class="imgCenter"/>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="columnDown">
+            <div class="columnDown">
+                <img src="pais.png" class="imgCenter"/>
+            </div>
+            <div class="columnDown">
+                <h4>Caderneta Digital da Saúde da Criança</h4>
+                <p>Acompanhe a saúde e o desenvolvimento do seu filho.</p>
+                <a>Leia mais &rarr;</a>
+            </div>
+        </div>
+
+
+        <div class="columnDown">
+            <div class="columnDown">
+                <img src="pais.png" class="imgCenter"/>
+            </div>
+            <div class="columnDown">
+                <h4>Para Profissionais da Saúde</h4>
+                <p>Registre e acompanhe as informações mais facilmente.</p>
+                <a>Leia mais &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
