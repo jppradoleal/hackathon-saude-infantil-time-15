@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const childSchema = new mongoose.Schema({
-  nome_da_crianca: {
+  nome: {
     type: String, 
     required: true
   },
@@ -10,51 +10,23 @@ const childSchema = new mongoose.Schema({
     ref: 'User',
     required: true
   },
-  municipio_nascimento: {
+  municipio: {
     type: String,
     required: true
   },
-  endereco: {
-    type: String,
-    required: true
-  },
-  ponto_referencia: {
-    type: String
-  },
-  telefone: String,
-  bairro: String,
-  cep: String,
-  cidade: String,
-  uf: {
-    type: String,
-    maxlength: 2,
-  },
-  sexo_biologico: {
+  sexo: {
     type: String,
     enum: ['M', 'F'],
     required: true
   },
-  raca: {
-    type: String,
-    enum: [
-      'BRANCA',
-      'PRETA',
-      'PARDA',
-      'AMARELA',
-      'INDÍGENA'
-    ],
-    required: true
-  },
+  frutas: String,
+  industrializados: String,
+  refeicoes_na_mesa: String,
+  doces: String,
 
-  atividades_fisicas: Boolean,
-  comida_industrializada: Boolean,
-  frequenta_medico: Boolean,
+  numeroDeclaracao: String,
 
-  endereco_un_basica_frequentada: String,
-  num_cartao_sus: String,
-  rg: String,
-
-  data_de_nascimento: Date,
+  nascimento: Date,
 }, {
   timestamps: true
 });

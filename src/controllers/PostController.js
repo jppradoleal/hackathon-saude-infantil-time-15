@@ -31,8 +31,8 @@ module.exports = {
   },
 
   async index(req, res) {
-    const { page=0 } = req.query;
-    const posts = await Post.find().skip(page*10).limit(10);
+    const { page=0, postsByPage=10 } = req.query;
+    const posts = await Post.find().sort({_createdAt: -1}).skip(page*Number(postsByPage)).limit(Number(postsByPage));
     return res.json(posts);
   }
 }

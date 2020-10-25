@@ -4,25 +4,18 @@ const Child = require('../models/Child');
 module.exports = {
   async show(req, res) {
     const { id: parent_id } = req.user;
-    const { id } = req.params;
 
-    const child = await Child.findById(id);
+    const child = await Child.find({ parente: parent_id });
 
-    if(child.parente == parent_id) {
-      const data = await ChildData.find({id_crianca: id})
-  
-      return res.json(data);
-    }
-
-    return res.status(400).json('No child data found');
+    const data = await Promise.all(child.map(async (c) => {
+      const temp = await ChildData.find({id_crianca: c._id});
+      return temp;
+    }));
+    return res.json(data);
   },
   async index(req, res) {
-    const {id} = req.user;
+    let data = await ChildData.find().populate('id_crianca', 'nome municipio sexo frutas industrializados doces refeicoes_na_mesa nascimento').exec();
 
-    let data = await ChildData.find().populate('id_crianca', 'parente nome_da_crianca').exec();
-
-    const returnedData = data.filter(child => child.id_crianca.parente == id);
-
-    return res.json(returnedData);
+    return res.json(data);
   }
 }

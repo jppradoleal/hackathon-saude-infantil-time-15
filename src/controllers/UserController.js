@@ -1,6 +1,7 @@
 const User = require('../models/User');
 const bcrypt = require('bcrypt');
 const yup = require('yup');
+const axios = require('axios');
 
 module.exports = {
   async show(req, res) {
@@ -14,7 +15,6 @@ module.exports = {
   async create(req, res) {
     let {
       nome,
-      email,
       senha,
       data_de_nascimento,
       estado,
@@ -26,7 +26,6 @@ module.exports = {
 
     const data = {
       nome,
-      email,
       senha,
       data_de_nascimento,
       estado,
@@ -36,15 +35,14 @@ module.exports = {
       cpf
     }
 
-    const userExists = await User.findOne({email});
+    const cpfExists = await User.findOne({cpf});
 
-    if(userExists) {
-      return res.status(400).json({error: 'Email already signed up'});
+    if(cpfExists) {
+      return res.status(400).json({error: 'Already signed up'});
     }
 
     const schema = yup.object().shape({
       nome: yup.string().required(),
-      email: yup.string().email().required(),
       senha: yup.string().required(),
       data_de_nascimento: yup.date().required(),
       estado: yup.string().required(),

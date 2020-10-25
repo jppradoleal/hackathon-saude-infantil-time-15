@@ -7,7 +7,8 @@ const userSchema = mongoose.Schema({
   },
   cpf: {
     type: String,
-    required: true
+    required: true,
+    unique: true
   },
   senha: {
     type: String,
