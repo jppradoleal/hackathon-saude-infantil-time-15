@@ -4,7 +4,8 @@
   "description": "Backend feito para o Hackathon Saúde Infantil realizado pela Desiderata e a Shawee.",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon ./src/server.js"
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js"
   },
   "repository": {
     "type": "git",
